@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice Vault · Coding interview drills, questions and approaches</title>
+<meta name="description" content="A curated bank of the programming problems that dominate campus coding assessments and technical interview rounds: problem, pattern, technique and algorithm steps, arranged in the order you should learn them. No answers, no code, no sign-in.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">PV</span>
+      <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="topics.html" data-nav="bank">Question bank <span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-drop-menu">
+          <a href="topics.html">All problems</a>
+          <a href="topics.html?topic=numbers">Number programs</a>
+          <a href="topics.html?topic=patterns">Pattern programming</a>
+          <a href="topics.html?topic=arrays">Arrays &amp; matrix</a>
+          <a href="topics.html?topic=strings">Strings</a>
+          <a href="topics.html?topic=sortsearch">Sorting &amp; searching</a>
+        </div>
+      </div>
+      <a href="practice.html" data-nav="practice">Drill sheet</a>
+      <a href="reference.html" data-nav="reference">Reference</a>
+      <a href="about.html" data-nav="about">How to use</a>
+      <button class="icon-btn" type="button" data-theme-toggle>Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero home">
+    <div>
+      <span class="eyebrow">Placement coding practice</span>
+      <h1>Every question, pattern and technique <em>without a single line of code.</em></h1>
+      <p class="lede">
+        A curated bank of the programming problems that dominate fresher coding assessments and technical rounds,
+        arranged in the order you should actually learn them. Each entry gives you the problem, the pattern it
+        belongs to, the technique to reach for, the algorithm as plain steps, the traps and the cost you are
+        aiming for. The code stays your job &mdash; which is exactly why it sticks.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="topics.html">Browse the question bank</a>
+        <a class="btn btn-ghost" href="practice.html">Generate a drill sheet</a>
+      </div>
+
+      <form id="heroSearch" class="toolbar" style="margin-top:26px" role="search">
+        <div class="row">
+          <div class="field grow">
+            <label for="heroSearchInput">Search the bank</label>
+            <input id="heroSearchInput" type="search" placeholder="Try: palindrome, sliding window, TCS, matrix, GCD&hellip;">
+          </div>
+          <button class="btn btn-primary btn-sm" type="submit">Search</button>
+        </div>
+        <p class="meta">Search by problem name, pattern, technique or company. Nothing here needs an account.</p>
+      </form>
+    </div>
+
+    <div class="hero-side">
+      <div class="fact"><b id="statTotal">0</b><span>problems with full approach notes</span></div>
+      <div class="fact"><b id="statVH">0</b><span>flagged very-high frequency</span></div>
+      <div class="fact"><b id="statCompanies">0</b><span>hiring teams tagged</span></div>
+      <div class="fact"><b>5</b><span>topics, in learning order</span></div>
+      <span class="side-stamp" aria-hidden="true">No sign-in<br>No answers<br>No tracking</span>
+    </div>
+  </div>
+
+  <section class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>How the vault works</h2>
+        <p>Four moves per problem. The code stays your job, so the recall stays in your head.</p>
+      </div>
+    </div>
+    <ol class="how">
+      <li><span class="how-no">1</span><div><h3>Read the statement cold</h3><p>Input shape, output shape, constraints. Say the smallest and largest case out loud before anything else.</p></div></li>
+      <li><span class="how-no">2</span><div><h3>Name the pattern</h3><p>Traversal, two-pointer, window, hashing, recursion? The bank trains you to classify before you code.</p></div></li>
+      <li><span class="how-no">3</span><div><h3>Write steps, then code</h3><p>Numbered plain-language steps first. Loop bounds and stopping conditions fixed before the first line of code.</p></div></li>
+      <li><span class="how-no">4</span><div><h3>Compare and mark</h3><p>Open the problem page, compare your steps with the listed algorithm and traps, then mark it practised.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="wrap" id="topics">
+    <div class="section-head">
+      <div>
+        <h2>Start here: the order that works</h2>
+        <p>Five topics, sequenced so every new idea leans on the one before it. Number logic builds loop control,
+          patterns force loop bounds, arrays need index discipline, strings need classification, and sorting and
+          searching are the tools you then apply everywhere.</p>
+      </div>
+    </div>
+    <div class="topic-grid" id="topicGrid"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>Most repeated across recent drives</h2>
+        <p>A sample of the very-high-frequency problems. These are the ones that turn up again and again in
+          online coding rounds and in the machine-coding style follow-ups of the interview.</p>
+      </div>
+      <span class="count"><a href="topics.html?freq=Very%20High&amp;sort=frequency">See all very-high frequency &rarr;</a></span>
+    </div>
+    <div class="q-list" id="featuredList"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap inner">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="mark">PV</span>
+        <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+      </a>
+      <p class="muted small" style="margin-top:12px;max-width:34ch">Questions, patterns and algorithms for fresher
+        coding assessments. Content only &mdash; no accounts, no answers, no code.</p>
+    </div>
+    <div>
+      <h4>Topics in order</h4>
+      <ul>
+        <li><a href="topics.html?topic=numbers">Number programs</a></li>
+        <li><a href="topics.html?topic=patterns">Pattern programming</a></li>
+        <li><a href="topics.html?topic=arrays">Arrays &amp; matrix</a></li>
+        <li><a href="topics.html?topic=strings">Strings</a></li>
+        <li><a href="topics.html?topic=sortsearch">Sorting &amp; searching</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="topics.html?freq=Very%20High&amp;sort=frequency">Very-high frequency list</a></li>
+        <li><a href="topics.html?sort=difficulty">Easiest first</a></li>
+        <li><a href="practice.html">Random drill sheet</a></li>
+        <li><a href="reference.html">Technique index</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reading</h4>
+      <ul>
+        <li><a href="about.html">How to use this site</a></li>
+        <li><a href="about.html#method">How the bank was built</a></li>
+        <li><a href="reference.html#rounds">Round formats &amp; emphasis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    Practice Vault is an independent study resource. Company names are used only to indicate where a question
+    style has been reported; they imply no affiliation or endorsement. Assessment formats change between drives,
+    so always confirm details on the official careers page of the company you are applying to.
+  </div>
+</footer>
+
+<script src="assets/js/data/topics.js"></script>
+<script src="assets/js/data/numbers.js"></script>
+<script src="assets/js/data/patterns.js"></script>
+<script src="assets/js/data/arrays.js"></script>
+<script src="assets/js/data/strings.js"></script>
+<script src="assets/js/data/sortsearch.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.addEventListener('load', function(){
+  var d=document.documentElement;
+  var t=document.querySelector('.nav-toggle');
+  var out=document.createElement('pre');
+  out.style.cssText='position:fixed;left:0;bottom:0;z-index:9999;background:#fff;color:#000;font:12px monospace;padding:6px;margin:0';
+  var info='scrollW='+d.scrollWidth+' clientW='+d.clientWidth+' overflow='+(d.scrollWidth>d.clientWidth);
+  if(t){var cs=getComputedStyle(t);info+='\ntoggle.display='+cs.display+' visible='+(t.getBoundingClientRect().width>0);}
+  out.textContent=info;
+  document.body.appendChild(out);
+});
+</script>
+</body>
+</html>

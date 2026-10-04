@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference · Practice Vault</title>
+<meta name="description" content="Patterns, techniques, round formats, complexity phrasing and the classic traps, generated from the question bank itself.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="reference">
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">PV</span>
+      <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="topics.html" data-nav="bank">Question bank <span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-drop-menu">
+          <a href="topics.html">All problems</a>
+          <a href="topics.html?topic=numbers">Number programs</a>
+          <a href="topics.html?topic=patterns">Pattern programming</a>
+          <a href="topics.html?topic=arrays">Arrays &amp; matrix</a>
+          <a href="topics.html?topic=strings">Strings</a>
+          <a href="topics.html?topic=sortsearch">Sorting &amp; searching</a>
+        </div>
+      </div>
+      <a href="practice.html" data-nav="practice">Drill sheet</a>
+      <a href="reference.html" data-nav="reference">Reference</a>
+      <a href="about.html" data-nav="about">How to use</a>
+      <button class="icon-btn" type="button" data-theme-toggle>Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:6px">
+    <span class="eyebrow">Reference</span>
+    <h1>Patterns, techniques and how the rounds test them</h1>
+    <p class="lede">Generated from the bank itself: pick a technique, see its problems, redo the weakest from memory.</p>
+  </div>
+
+  <section id="refBody" style="padding-top:14px">
+    <div class="stat-row" style="margin-top:0">
+      <div class="stat"><b id="refTotal">0</b><span>Problems indexed</span></div>
+      <div class="stat"><b id="refVH">0</b><span>Very-high frequency</span></div>
+      <div class="stat"><b id="refEasy">0</b><span>Easy</span></div>
+      <div class="stat"><b id="refMedium">0</b><span>Medium</span></div>
+      <div class="stat"><b id="refHard">0</b><span>Hard</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>Your progress</h2>
+        <p>Counted from the "mark as practised" ticks you have set on individual problem pages.</p>
+      </div>
+    </div>
+    <div class="panel" id="refProgress"></div>
+  </section>
+
+  <section id="techniques">
+    <div class="section-head">
+      <div>
+        <h2>Technique index</h2>
+        <p>The concrete tool each problem wants. Learn these in order and most questions stop looking new: the same
+          handful of techniques keep reappearing under different storylines.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Technique</th><th>Used in</th><th>Topics</th><th>Example problems</th></tr></thead>
+        <tbody id="techRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="patterns">
+    <div class="section-head">
+      <div>
+        <h2>Pattern index</h2>
+        <p>Patterns are the shape of the solution. Identify the pattern before you write anything &mdash; that single
+          habit is usually what separates a calm candidate from a stuck one.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Pattern</th><th>Used in</th><th>Topics</th><th>Example problems</th></tr></thead>
+        <tbody id="patRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="rounds">
+    <div class="section-head">
+      <div>
+        <h2>How each round tends to test these five topics</h2>
+        <p>Compiled from candidate reports of recent drives and from published section-wise breakdowns. Use it to
+          decide where to spend your last week, not as a substitute for the official syllabus.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Assessment</th><th>Reported shape</th><th>What it emphasises</th><th>Prioritise</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>TCS NQT &amp; role tiers</b></td>
+            <td>One to two problems in a short timed block at the entry tier; two to three problems with
+              60&ndash;90 minutes at the higher tiers.</td>
+            <td>Exact output format, multiple test cases per problem and partial credit, so a solution that works for
+              the common cases still scores.</td>
+            <td>Number logic and series, array traversal, strings, matrices</td>
+          </tr>
+          <tr>
+            <td><b>Infosys SP / DSE</b></td>
+            <td>About two coding problems in roughly 60 minutes, alongside MCQ sets on programming concepts and data
+              structures.</td>
+            <td>Medium to medium-hard difficulty with partial scoring. The coding block is the biggest filter for the
+              premium tracks.</td>
+            <td>Arrays with a twist, strings, sorting and searching, then harder dynamic-programming and graph ideas
+              for the top track</td>
+          </tr>
+          <tr>
+            <td><b>Cognizant GenC / GenC Next</b></td>
+            <td>A technical assessment split into two skill clusters: three sub-sections, six questions offered with
+              three to be solved, in about 105&ndash;120 minutes.</td>
+            <td>The problem-solving sub-sections are described as searching, sorting, string handling and arrays, and
+              the round is an elimination stage.</td>
+            <td>Sorting and searching, strings, arrays, pattern printing, number puzzles</td>
+          </tr>
+          <tr>
+            <td><b>Capgemini</b></td>
+            <td>Roughly 20&ndash;25 pseudocode and output-prediction questions inside the programming and
+              problem-solving block, followed by the coding stage.</td>
+            <td>Tracing loops and arrays by hand, predicting printed output and reading complexity. No negative
+              marking has been reported in recent drives.</td>
+            <td>Number logic, pattern printing, array and string tracing by hand</td>
+          </tr>
+          <tr>
+            <td><b>Accenture</b></td>
+            <td>A short timed coding block of around two problems inside the online assessment, with logic written on
+              paper in the technical conversation.</td>
+            <td>Clean, explainable logic more than clever optimisation, and being able to dry-run your own code.</td>
+            <td>Numbers, arrays, strings</td>
+          </tr>
+          <tr>
+            <td><b>Wipro (Elite / NTH)</b></td>
+            <td>A timed coding block of one to two problems, alongside aptitude and written sections.</td>
+            <td>Direct statements over trick wording: transform, count or search through simple input.</td>
+            <td>Numbers, strings, arrays</td>
+          </tr>
+          <tr>
+            <td><b>HCL, LTIMindtree, Tech Mahindra, Mphasis, IBM and similar</b></td>
+            <td>Smaller logic-heavy blocks, usually one or two problems, often with the algorithm explained
+              afterwards.</td>
+            <td>Fundamentals and correct handling of edge cases rather than optimisation.</td>
+            <td>Numbers, patterns, arrays, strings</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout warn" style="margin-top:16px">
+      <span class="ico">!</span>
+      <span>Every figure above is candidate-reported or taken from published breakdowns, and assessment formats move
+        between hiring drives. Confirm the current pattern, question count and cutoff on the official careers page of
+        the company you are applying to before planning around it.</span>
+    </div>
+  </section>
+
+  <section id="costs">
+    <div class="section-head">
+      <div>
+        <h2>Say the cost out loud</h2>
+        <p>Interviewers score how you describe your approach as much as whether it runs. These are the sentences that
+          work for each solution shape.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>If your approach&hellip;</th><th>Say this</th><th>Watch out for</th></tr></thead>
+        <tbody>
+          <tr><td>Reads each element exactly once</td><td>O(n) time, O(1) extra space</td><td>Hidden nested work such as a lookup inside the loop</td></tr>
+          <tr><td>Compares every pair</td><td>O(n&sup2;) time, O(1) space &mdash; and say that it will not scale</td><td>Being asked for a linear version and not having one ready</td></tr>
+          <tr><td>Builds a frequency map</td><td>O(n) time, O(n) space, O(1) average lookup afterwards</td><td>Case folding and repeated counting passes</td></tr>
+          <tr><td>Sorts first, then scans</td><td>O(n log n) for the sort plus O(n) for the scan</td><td>Destroying the original order when the question needs it preserved</td></tr>
+          <tr><td>Searches sorted data</td><td>O(log n) time, O(1) space, iteratively</td><td>Integer midpoint overflow and off-by-one on the closing index</td></tr>
+          <tr><td>Searches an answer range</td><td>O(log range) multiplied by the cost of one feasibility check</td><td>Choosing a check that is not monotonic over the range</td></tr>
+          <tr><td>Keeps a moving window</td><td>O(n), because each element enters and leaves the window once</td><td>Shrinking the window before updating the best answer</td></tr>
+          <tr><td>Uses a running total or prefix sum</td><td>O(n) to build, O(1) per range query</td><td>Handling the empty prefix when a range starts at the first element</td></tr>
+          <tr><td>Uses two pointers on sorted data</td><td>O(n) after the sort, O(1) extra space</td><td>Moving both pointers at once and skipping valid pairs</td></tr>
+          <tr><td>Scans once keeping a local best</td><td>O(n) time, O(1) space, single pass</td><td>Restarting the running value at the wrong element</td></tr>
+          <tr><td>Precomputes counts into a small array</td><td>O(n + k) time where k is the range of values</td><td>Using it when the value range is unbounded</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="traps">
+    <div class="section-head">
+      <div>
+        <h2>The same twelve mistakes, every year</h2>
+        <p>These cost marks far more often than wrong logic does, because they are invisible until the hidden test
+          cases run.</p>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <article class="topic-card" style="cursor:default">
+        <span class="icon">&#9888;</span>
+        <h3>Input &amp; format</h3>
+        <ul class="bullet-list">
+          <li>Printing an extra prompt text or a trailing space that the expected output does not contain.</li>
+          <li>Reading the whole line when the input has several space-separated values, or the reverse.</li>
+          <li>Assuming the number of test cases is fixed at one.</li>
+          <li>Assuming values are positive: zero, the empty input and negative numbers appear in hidden cases.</li>
+        </ul>
+      </article>
+      <article class="topic-card" style="cursor:default">
+        <span class="icon">&#9888;</span>
+        <h3>Loops &amp; bounds</h3>
+        <ul class="bullet-list">
+          <li>Off-by-one in the last row, last column or last index of a loop boundary.</li>
+          <li>Using the original length after modifying the input inside the loop.</li>
+          <li>Nested loops that run one iteration too many and print an extra blank line.</li>
+          <li>Not resetting an accumulator between test cases.</li>
+        </ul>
+      </article>
+      <article class="topic-card" style="cursor:default">
+        <span class="icon">&#9888;</span>
+        <h3>Values &amp; types</h3>
+        <ul class="bullet-list">
+          <li>Overflow on factorials, powers or products &mdash; use a wide integer type or reduce with a modulus.</li>
+          <li>Integer division where a decimal result is expected, or the reverse.</li>
+          <li>Comparing characters by their code instead of after normalising case.</li>
+          <li>Duplicate output when an element is reported once per occurrence instead of once in total.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="coverage">
+    <div class="section-head">
+      <div>
+        <h2>Topic coverage</h2>
+        <p>How the bank is distributed, and which hiring teams are tagged most often inside each topic.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Topic</th><th>Problems</th><th>Very high</th><th>Most tagged</th><th>Core sub-skills</th></tr></thead>
+        <tbody id="topicRows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap inner">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="mark">PV</span>
+        <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+      </a>
+      <p class="muted small" style="margin-top:12px;max-width:34ch">Questions, patterns and algorithms for fresher
+        coding assessments. Content only &mdash; no accounts, no answers, no code.</p>
+    </div>
+    <div>
+      <h4>Topics in order</h4>
+      <ul>
+        <li><a href="topics.html?topic=numbers">Number programs</a></li>
+        <li><a href="topics.html?topic=patterns">Pattern programming</a></li>
+        <li><a href="topics.html?topic=arrays">Arrays &amp; matrix</a></li>
+        <li><a href="topics.html?topic=strings">Strings</a></li>
+        <li><a href="topics.html?topic=sortsearch">Sorting &amp; searching</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="topics.html?freq=Very%20High&amp;sort=frequency">Very-high frequency list</a></li>
+        <li><a href="topics.html?sort=difficulty">Easiest first</a></li>
+        <li><a href="practice.html">Random drill sheet</a></li>
+        <li><a href="reference.html">Technique index</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reading</h4>
+      <ul>
+        <li><a href="about.html">How to use this site</a></li>
+        <li><a href="about.html#method">How the bank was built</a></li>
+        <li><a href="reference.html#rounds">Round formats &amp; emphasis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    Practice Vault is an independent study resource. Company names are used only to indicate where a question
+    style has been reported; they imply no affiliation or endorsement. Assessment formats change between drives,
+    so always confirm details on the official careers page of the company you are applying to.
+  </div>
+</footer>
+
+<script src="assets/js/data/topics.js"></script>
+<script src="assets/js/data/numbers.js"></script>
+<script src="assets/js/data/patterns.js"></script>
+<script src="assets/js/data/arrays.js"></script>
+<script src="assets/js/data/strings.js"></script>
+<script src="assets/js/data/sortsearch.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

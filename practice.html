@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drill sheet generator · Practice Vault</title>
+<meta name="description" content="Generate a random mix of practice problems for a chosen topic and difficulty, with the pattern and technique shown and the answers left to you. Print it and work offline.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="practice">
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">PV</span>
+      <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="topics.html" data-nav="bank">Question bank <span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-drop-menu">
+          <a href="topics.html">All problems</a>
+          <a href="topics.html?topic=numbers">Number programs</a>
+          <a href="topics.html?topic=patterns">Pattern programming</a>
+          <a href="topics.html?topic=arrays">Arrays &amp; matrix</a>
+          <a href="topics.html?topic=strings">Strings</a>
+          <a href="topics.html?topic=sortsearch">Sorting &amp; searching</a>
+        </div>
+      </div>
+      <a href="practice.html" data-nav="practice">Drill sheet</a>
+      <a href="reference.html" data-nav="reference">Reference</a>
+      <a href="about.html" data-nav="about">How to use</a>
+      <button class="icon-btn" type="button" data-theme-toggle>Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:6px">
+    <span class="eyebrow">Drill sheet</span>
+    <h1>Build a practice set, then close the laptop</h1>
+    <p class="lede">Shuffle the bank into a fresh sheet, print it, and solve it on paper before you touch a keyboard.</p>
+  </div>
+
+  <section style="padding-top:16px">
+    <div class="toolbar no-print">
+      <div class="row">
+        <div class="field grow">
+          <label for="pTopic">Topic</label>
+          <select id="pTopic"></select>
+        </div>
+        <div class="field">
+          <label for="pDiff">Difficulty</label>
+          <select id="pDiff"></select>
+        </div>
+        <div class="field">
+          <label for="pFreq">Frequency</label>
+          <select id="pFreq"></select>
+        </div>
+        <div class="field">
+          <label for="pCount">How many</label>
+          <select id="pCount"></select>
+        </div>
+        <button class="btn btn-primary btn-sm" type="button" id="generateBtn">Generate</button>
+        <button class="btn btn-ghost btn-sm" type="button" id="rerollBtn">Shuffle again</button>
+        <button class="btn btn-ghost btn-sm" type="button" id="printBtn">Print</button>
+      </div>
+      <div class="meta">
+        <label class="tag-line small" for="hideHints" style="gap:8px">
+          <input type="checkbox" id="hideHints"> Hide pattern and technique hints
+        </label>
+        <span class="muted">Sheet order is random every time. Generating again gives you a different set.</span>
+      </div>
+    </div>
+
+    <div class="panel no-print" style="margin-bottom:18px">
+      <h2>How to run a drill</h2>
+      <ul class="bullet-list">
+        <li>Read one problem at a time and write the algorithm as numbered steps before any code.</li>
+        <li>Fix the loop bounds and the stopping condition out loud &mdash; that is where most marks are lost.</li>
+        <li>Then write the code, run it once, and compare your steps with the algorithm list on the problem page.</li>
+        <li>Mark a problem as practised only when you can reproduce its steps from memory the next day.</li>
+      </ul>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <h2>Your sheet</h2>
+        <p id="sheetMeta" class="muted"></p>
+      </div>
+      <span class="count no-print">The hints row is there to unblock you, not to answer it for you.</span>
+    </div>
+
+    <div class="q-list" id="sheet"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap inner">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="mark">PV</span>
+        <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+      </a>
+      <p class="muted small" style="margin-top:12px;max-width:34ch">Questions, patterns and algorithms for fresher
+        coding assessments. Content only &mdash; no accounts, no answers, no code.</p>
+    </div>
+    <div>
+      <h4>Topics in order</h4>
+      <ul>
+        <li><a href="topics.html?topic=numbers">Number programs</a></li>
+        <li><a href="topics.html?topic=patterns">Pattern programming</a></li>
+        <li><a href="topics.html?topic=arrays">Arrays &amp; matrix</a></li>
+        <li><a href="topics.html?topic=strings">Strings</a></li>
+        <li><a href="topics.html?topic=sortsearch">Sorting &amp; searching</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="topics.html?freq=Very%20High&amp;sort=frequency">Very-high frequency list</a></li>
+        <li><a href="topics.html?sort=difficulty">Easiest first</a></li>
+        <li><a href="practice.html">Random drill sheet</a></li>
+        <li><a href="reference.html">Technique index</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reading</h4>
+      <ul>
+        <li><a href="about.html">How to use this site</a></li>
+        <li><a href="about.html#method">How the bank was built</a></li>
+        <li><a href="reference.html#rounds">Round formats &amp; emphasis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    Practice Vault is an independent study resource. Company names are used only to indicate where a question
+    style has been reported; they imply no affiliation or endorsement. Assessment formats change between drives,
+    so always confirm details on the official careers page of the company you are applying to.
+  </div>
+</footer>
+
+<script src="assets/js/data/topics.js"></script>
+<script src="assets/js/data/numbers.js"></script>
+<script src="assets/js/data/patterns.js"></script>
+<script src="assets/js/data/arrays.js"></script>
+<script src="assets/js/data/strings.js"></script>
+<script src="assets/js/data/sortsearch.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

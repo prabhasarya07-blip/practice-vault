@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use · Practice Vault</title>
+<meta name="description" content="Practice Vault is a reading-and-writing loop, not a solution library. How to use the bank, how it was assembled, and what it deliberately leaves out.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="about">
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="mark">PV</span>
+      <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="siteNav" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <div class="nav-drop">
+        <a class="nav-drop-btn" href="topics.html" data-nav="bank">Question bank <span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-drop-menu">
+          <a href="topics.html">All problems</a>
+          <a href="topics.html?topic=numbers">Number programs</a>
+          <a href="topics.html?topic=patterns">Pattern programming</a>
+          <a href="topics.html?topic=arrays">Arrays &amp; matrix</a>
+          <a href="topics.html?topic=strings">Strings</a>
+          <a href="topics.html?topic=sortsearch">Sorting &amp; searching</a>
+        </div>
+      </div>
+      <a href="practice.html" data-nav="practice">Drill sheet</a>
+      <a href="reference.html" data-nav="reference">Reference</a>
+      <a href="about.html" data-nav="about">How to use</a>
+      <button class="icon-btn" type="button" data-theme-toggle>Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:6px">
+    <span class="eyebrow">How to use</span>
+    <h1>A reading-and-writing loop, not a solution library</h1>
+    <p class="lede">If you cannot state the algorithm in plain steps, you cannot write the code under time pressure &mdash; so every page here stops where the thinking begins.</p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>The loop</h2>
+        <p>Repeat this for each problem. It takes about ten minutes and beats an hour of reading finished solutions.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <span class="wk">Step 1</span>
+        <h3>Read only the statement</h3>
+        <p class="muted small">Note the input shape, the output shape and the constraints. Say out loud what the
+          smallest and largest cases look like.</p>
+      </article>
+      <article class="step">
+        <span class="wk">Step 2</span>
+        <h3>Guess the pattern</h3>
+        <p class="muted small">Traversal, two-pointer, window, hashing, recursion, matrix? Naming the pattern before
+          you look is the skill being built here.</p>
+      </article>
+      <article class="step">
+        <span class="wk">Step 3</span>
+        <h3>Write steps, then code</h3>
+        <p class="muted small">Numbered plain steps first, then the code in the language you will be tested in. Keep
+          the two separate and honest.</p>
+      </article>
+      <article class="step">
+        <span class="wk">Step 4</span>
+        <h3>Compare, then mark</h3>
+        <p class="muted small">Open the problem page and compare your steps against the listed algorithm and traps.
+          Tick &ldquo;practised&rdquo; only if they matched in substance.</p>
+      </article>
+      <article class="step">
+        <span class="wk">Step 5</span>
+        <h3>Come back cold</h3>
+        <p class="muted small">A day later, redo the problem from memory with hints hidden. That second pass is what
+          converts understanding into recall.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="section-head">
+      <div>
+        <h2>How the bank was assembled</h2>
+        <p>Nothing here is a random dump of popular interview questions. The list was built topic by topic from what
+          candidates report actually appearing in fresher assessment rounds and technical conversations.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <ul class="bullet-list">
+        <li><b>Company question lists and placement papers.</b> Public compilations of questions reported from recent
+          hiring drives were collected first, then grouped by topic instead of by company.</li>
+        <li><b>Assessment structure write-ups.</b> Section-wise breakdowns for the major hiring programmes were used to
+          weight how much space each topic gets here &mdash; which is why arrays and strings carry the most problems,
+          and why pattern printing is not treated as a toy.</li>
+        <li><b>Interview-experience reports.</b> Repeatedly recurring follow-ups and traps became the &ldquo;follow-up
+          variations&rdquo; and &ldquo;where candidates lose marks&rdquo; sections on each problem page.</li>
+        <li><b>De-duplication.</b> Questions that are the same idea with a different storyline were merged into one
+          entry with variations noted, so the bank measures breadth rather than repetition.</li>
+        <li><b>Ordering by dependency.</b> Topics and variants are sequenced so each new problem needs only the ideas
+          already introduced earlier in the bank.</li>
+      </ul>
+      <div class="callout" style="margin-top:16px">
+        <span class="ico">&rarr;</span>
+        <span>Frequency labels indicate how often a style has been reported, not a guarantee. Use them to order your
+          practice, and always read the official syllabus for the drive you are targeting.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="scope">
+    <div class="section-head">
+      <div>
+        <h2>What is in scope, and what is not</h2>
+        <p>Five topics, chosen because they appear in nearly every fresher assessment and because you can fully master
+          them in a few weeks.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>In the bank</th><th>Deliberately out of scope</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="bullet-list">
+                <li>Number logic, divisibility, bases, series</li>
+                <li>Pattern printing in stars, numbers and alphabets</li>
+                <li>Arrays, running totals, two-pointer, windows, hashing, matrices</li>
+                <li>Strings, classification, frequency maps, anagrams, tokenising</li>
+                <li>Sorting algorithms and searching, including binary search variants</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bullet-list">
+                <li>Linked lists, stacks, queues, trees, heaps and graphs as full topics</li>
+                <li>Dynamic programming and greedy proof-heavy problems</li>
+                <li>System design, database and aptitude questions</li>
+                <li>Language trivia and framework-specific behaviour</li>
+                <li>Finished code and expected outputs &mdash; by design, not by omission</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small" style="margin-top:14px">The advanced structures above matter for product-company and
+      specialist-track interviews, but they are not what decides a fresher assessment or a first technical round, and
+      learning them before these five topics is a common way to lose preparation time.</p>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <div><h2>Questions people ask about this site</h2></div>
+    </div>
+    <div class="panel">
+      <h3>Do I need to create an account?</h3>
+      <p>No. There is no sign-up, no email, no login and no tracking. Open it, use it, close it.</p>
+
+      <h3>Why are there no answers or solutions?</h3>
+      <p>Because a solution you read is a solution you cannot reproduce. You get the pattern, the technique and the
+        algorithm as steps &mdash; the parts an interviewer wants to hear &mdash; and you produce the code yourself.</p>
+
+      <h3>Is the code written in one specific language?</h3>
+      <p>No. The algorithm steps are language-neutral, so the same page works whether you will be tested in C, C++,
+        Java or Python. Details that differ between languages, such as integer width or string handling, are flagged in
+        the traps section.</p>
+
+      <h3>Where is my progress stored?</h3>
+      <p>In your browser's local storage, on your machine. The &ldquo;mark as practised&rdquo; ticks and your theme
+        choice are the only things saved, and clearing your browser data removes them.</p>
+
+      <h3>Can I use the drill sheet for group practice?</h3>
+      <p>Yes. Generate a sheet, hide the hints and print it. Give the same sheet to a group and compare the algorithms
+        people write before anyone touches a keyboard.</p>
+
+      <h3>Can I use this offline?</h3>
+      <p>Yes. Save the folder and open the pages locally &mdash; there is no server, no build step and no external
+        request anywhere in the site.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap inner">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="mark">PV</span>
+        <span class="name">Practice Vault<span class="sub">Coding interview drills</span></span>
+      </a>
+      <p class="muted small" style="margin-top:12px;max-width:34ch">Questions, patterns and algorithms for fresher
+        coding assessments. Content only &mdash; no accounts, no answers, no code.</p>
+    </div>
+    <div>
+      <h4>Topics in order</h4>
+      <ul>
+        <li><a href="topics.html?topic=numbers">Number programs</a></li>
+        <li><a href="topics.html?topic=patterns">Pattern programming</a></li>
+        <li><a href="topics.html?topic=arrays">Arrays &amp; matrix</a></li>
+        <li><a href="topics.html?topic=strings">Strings</a></li>
+        <li><a href="topics.html?topic=sortsearch">Sorting &amp; searching</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="topics.html?freq=Very%20High&amp;sort=frequency">Very-high frequency list</a></li>
+        <li><a href="topics.html?sort=difficulty">Easiest first</a></li>
+        <li><a href="practice.html">Random drill sheet</a></li>
+        <li><a href="reference.html">Technique index</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reading</h4>
+      <ul>
+        <li><a href="about.html">How to use this site</a></li>
+        <li><a href="about.html#method">How the bank was built</a></li>
+        <li><a href="reference.html#rounds">Round formats &amp; emphasis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    Practice Vault is an independent study resource. Company names are used only to indicate where a question
+    style has been reported; they imply no affiliation or endorsement. Assessment formats change between drives,
+    so always confirm details on the official careers page of the company you are applying to.
+  </div>
+</footer>
+
+<script src="assets/js/data/topics.js"></script>
+<script src="assets/js/data/numbers.js"></script>
+<script src="assets/js/data/patterns.js"></script>
+<script src="assets/js/data/arrays.js"></script>
+<script src="assets/js/data/strings.js"></script>
+<script src="assets/js/data/sortsearch.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
