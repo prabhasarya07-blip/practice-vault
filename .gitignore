@@ -27,3 +27,10 @@ desktop.ini
 .vscode/
 .idea/
 *.sublime-workspace
+.vercel
+
+# Environment / secrets
+# Vercel appends .env* on `vercel link`; keep the .env.example exception last
+# so a committed template is still possible.
+.env*
+!.env.example
